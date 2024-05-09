@@ -25,5 +25,6 @@ jobs:
           password: ${{ secrets.HOST_PASSWORD }}
           port: ${{ secrets.HOST_PORT }}
           overwrite: true
+          strip_components: 1
           source: dist/backend
           target: /var/node/calendar-syncer/
