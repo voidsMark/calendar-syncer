@@ -18,12 +18,12 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build:backend
 
-      - uses: appleboy/scp-action@v0.1.4
+      - uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST_ADDRESS }}
           username: ${{ secrets.HOST_USER }}
           password: ${{ secrets.HOST_PASSWORD }}
           port: ${{ secrets.HOST_PORT }}
           overwrite: true
-          source: "dist/backend/*"
+          source: dist/backend/*
           target: /var/node/calendar-syncer/
